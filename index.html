@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Intro-Challenge</title>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="./images/logo.svg" alt="" />
+      <button
+        class="mobile-nav-toggle"
+        aria-controls="navigation-menu"
+        aria-expanded="false"
+      >
+        <span class="visually-hidden">Menu</span>
+      </button>
+      <nav>
+        <ul id="navigationMenu" class="navigation-menu" data-visible="false">
+          <li class="dropdown-container">
+            <a href="#" class="dropdown-option black-hover">
+              Features
+              <button
+                id="openFeatures"
+                class="arrow"
+                menu-open="false"
+              ></button>
+            </a>
+            <ul
+              id="featuresMenu"
+              class="dropdown-menu dropdown-menu-features"
+              menu-visible="false"
+            >
+              <li>
+                <a href="#" class="features-item black-hover">
+                  <span class="icon-container">
+                    <img
+                      class="item-icon"
+                      src="./images/icon-todo.svg"
+                      alt=""
+                    />
+                  </span>
+                  Todo List
+                </a>
+              </li>
+              <li>
+                <a href="#" class="features-item black-hover">
+                  <span class="icon-container">
+                    <img
+                      class="item-icon"
+                      src="./images/icon-calendar.svg"
+                      alt=""
+                    />
+                  </span>
+                  Calendar
+                </a>
+              </li>
+              <li>
+                <a href="#" class="features-item black-hover">
+                  <span class="icon-container">
+                    <img
+                      class="item-icon"
+                      src="./images/icon-reminders.svg"
+                      alt=""
+                    />
+                  </span>
+                  Reminders
+                </a>
+              </li>
+              <li>
+                <a href="#" class="features-item black-hover">
+                  <span class="icon-container">
+                    <img
+                      class="item-icon"
+                      src="./images/icon-planning.svg"
+                      alt=""
+                    />
+                  </span>
+                  Planning
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown-container">
+            <a href="#" class="dropdown-option black-hover">
+              Company
+              <button
+                id="openCompany"
+                class="arrow"
+                menu-open="false"
+              ></button>
+            </a>
+            <ul
+              id="companyMenu"
+              class="dropdown-menu dropdown-menu-company"
+              menu-visible="false"
+            >
+              <li><a href="#" class="black-hover">History</a></li>
+              <li><a href="#" class="black-hover">Our Team</a></li>
+              <li><a href="#" class="black-hover">Blog</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="black-hover">Careers</a></li>
+          <li><a href="#" class="black-hover">About</a></li>
+        </ul>
+      </nav>
+      <div class="log-btns-container">
+        <a href="#" class="login-btn black-hover">Login</a>
+        <a href="#" class="register-btn black-hover">Register</a>
+      </div>
+    </header>
+    <main class="main-container">
+      <div class="image-container"></div>
+      <h1 class="title">Make remote work</h1>
+      <p class="description">
+        Get your team in sync, no matter your location. Streamline processes,
+        create team rituals, and watch productivity soar.
+      </p>
+      <div class="learnmore-btn-container">
+        <button class="learnmore-btn">Learn more</button>
+      </div>
+      <div class="sponsors-container">
+        <img
+          class="sponsor databiz"
+          src="./images/client-databiz.svg"
+          alt="databiz logo"
+        />
+        <img
+          class="sponsor audiophile"
+          src="./images/client-audiophile.svg"
+          alt="audiophile logo"
+        />
+        <img
+          class="sponsor meet"
+          src="./images/client-meet.svg"
+          alt="meet logo"
+        />
+        <img
+          class="sponsor maker"
+          src="./images/client-maker.svg"
+          alt="maker logo"
+        />
+      </div>
+      <div class="screen-opacity" data-visible="false"></div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>

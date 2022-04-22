@@ -1,0 +1,501 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+:root {
+  --Almost-White: hsl(0, 0%, 98%);
+  --Medium-Gray: hsl(0, 0%, 41%);
+  --Almost-Black: hsl(0, 0%, 8%);
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  background-color: var(--Almost-White);
+  margin: 0 auto;
+  min-height: 100vh;
+  max-width: 1440px;
+}
+
+/* ----------  HEADER SECTION ---------- */
+
+header {
+  display: flex;
+  width: 95%;
+  height: 3.5em;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.logo {
+  width: 4em;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.navigation-menu {
+  margin-left: 3em;
+  width: 25em;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 14px;
+  color: var(--Medium-Gray);
+}
+
+.navigation-menu,
+.dropdown-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-container {
+  position: relative;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: var(--Medium-Gray);
+}
+
+.dropdown-option:hover ~ ul {
+  transform: translateY(0%);
+  display: flex;
+}
+
+.black-hover:hover {
+  color: var(--Almost-Black);
+  cursor: pointer;
+}
+
+.arrow {
+  width: 1rem;
+  height: 0.7rem;
+  border: 0;
+  background: url("./images/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.arrow[menu-open="true"] {
+  background: url("./images/icon-arrow-up.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 2em;
+  padding-block: 0.8em;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+  font-size: 12px;
+}
+
+.dropdown-menu[menu-visible="true"] {
+  transform: translateY(0%);
+  display: flex;
+}
+
+.dropdown-menu:hover {
+  transform: translateY(0%);
+  display: flex;
+}
+
+.dropdown-menu-features {
+  right: 0;
+  height: 9.5em;
+  width: 8em;
+  padding-inline: 1em 1.4em;
+}
+
+.dropdown-menu-company {
+  left: 0;
+  height: 7em;
+  width: 5em;
+  padding-inline: 2em 1.25em;
+}
+
+.icon-container {
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-icon {
+  height: 1em;
+  width: auto;
+}
+
+.features-item {
+  gap: 5px;
+  display: flex;
+  align-items: center;
+  height: 1.5em;
+}
+
+.log-btns-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  width: 15em;
+  align-items: center;
+  font-size: 12px;
+}
+
+.login-btn {
+  border: 0;
+  background-color: var(--Almost-White);
+  color: var(--Medium-Gray);
+  height: 1em;
+}
+
+.register-btn {
+  background-color: var(--Almost-White);
+  color: var(--Medium-Gray);
+  width: 6.5em;
+  height: 1em;
+  padding: 0;
+  padding-block: 0.65em;
+  border: 0;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid var(--Medium-Gray);
+}
+
+.register-btn:hover {
+  border: 2px solid var(--Almost-Black);
+}
+
+/*  ---------- MAIN SECTION ---------- */
+
+.main-container {
+  margin-top: 1em;
+  width: 62em;
+  height: 34em;
+  display: grid;
+  grid-template-columns: 30em 32em;
+  grid-template-rows: 15em 8em 5em 6em;
+  margin-inline: auto;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.image-container {
+  height: 34em;
+  width: 37em;
+  background: url("./images/image-hero-desktop.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  grid-column: 2 / 3;
+  grid-row: 1 / 5;
+  overflow-x: hidden;
+}
+
+.title {
+  font-size: 4rem;
+  margin-bottom: 0;
+  width: 6.6em;
+}
+
+.description {
+  color: var(--Medium-Gray);
+  width: 24em;
+  height: auto;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.learnmore-btn-container {
+  width: 9em;
+  height: 3em;
+}
+
+.learnmore-btn {
+  color: var(--Almost-White);
+  font-size: 14px;
+  border-radius: 10px;
+  background-color: var(--Almost-Black);
+  border: 0;
+  padding: 0.9em 1.7em;
+  font-weight: 700;
+  transition: all 200ms ease-in-out;
+}
+
+.learnmore-btn:hover {
+  color: var(--Almost-Black);
+  background-color: var(--Almost-White);
+  cursor: pointer;
+  border: 1px solid var(--Almost-Black);
+}
+
+.sponsors-container {
+  width: 100%;
+  height: 2em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+  gap: 30px;
+}
+
+.sponsor {
+  width: auto;
+}
+
+.databiz,
+.meet {
+  height: 1em;
+}
+
+.audiophile {
+  height: 1.8em;
+  width: 3.5em;
+}
+
+.maker {
+  height: 1.2em;
+}
+
+@media (max-width: 40em) {
+
+  header {
+    height: 2.5em;
+  }
+
+  .logo {
+    align-self: flex-end;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    z-index: 9999;
+    position: absolute;
+    top: 0.7em;
+    right: 1em;
+    width: 2rem;
+    height: 2rem;
+    background: url("./images/icon-menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .mobile-nav-toggle[aria-expanded="true"] {
+    background: url("./images/icon-close-menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .dropdown-option {
+    display: flex;
+    gap: 12px;
+  }
+
+  .black-hover:hover {
+    color: var(--Medium-Gray);
+    cursor: auto;
+  }
+
+  .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-100%);
+    display: none;
+    gap: 20px;
+    padding: 0;
+    width: 10.5em;
+    position: static;
+    margin-left: 1.5em;
+    box-shadow: none;
+    font-size: 14px;
+  }
+
+  .dropdown-menu-features {
+    margin-top: 0.5em;
+    height: 13em;
+  }
+
+  .dropdown-menu-company {
+    height: 7em;
+    margin-top: 1em;
+  }
+
+  .dropdown-menu[menu-visible="true"] {
+    transform: translateY(0%);
+    display: flex;
+  }
+
+
+
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 35em;
+    overflow-x: hidden;
+    margin: 0;
+    justify-content: center;
+  }
+  .screen-opacity {
+    position: fixed;
+    inset: 0 0 0 0;
+    z-index: 1000;
+    background: hsl(0 0% 0% / 0.6);
+    display: none;
+  }
+
+  .screen-opacity[data-visible="true"] {
+    display: block;
+  }
+
+
+
+  .navigation-menu {
+    width: 12em;
+    flex-direction: column;
+    color: var(--Medium-Gray);
+    background-color: var(--Almost-White);
+    position: fixed;
+    inset: 0 0 0 40%;
+    padding: min(20vh, 4.5rem) 2em;
+    gap: 15px;
+    z-index: 5000;
+    transform: translateX(100%);
+    transition: transform 300ms ease-in;
+    margin: 0;
+    align-items: flex-start;
+  }
+
+
+
+  .navigation-menu[data-visible="true"] {
+    transform: translateX(0%);
+  }
+
+
+
+
+
+  .arrow {
+    width: 1rem;
+    height: 1rem;
+    border: 0;
+    background: url("./images/icon-arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .arrow[menu-open="true"] {
+    background: url("./images/icon-arrow-up.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .icon-container {
+    height: 2em;
+    width: 2em;
+    text-align: center;
+  }
+
+  .item-icon {
+    height: 1.5em;
+    width: auto;
+  }
+
+  .features-item {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+
+  .image-container {
+    width: 100%;
+    height: 15em;
+    background: url("./images/image-hero-mobile.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .title {
+    font-size: 2rem;
+    width: 9.7em;
+    height: 1em;
+    margin: 1em auto 0.6em;
+  }
+
+
+  .description {
+    width: 21em;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .log-btns-container {
+    display: none;
+  }
+
+  .learnmore-btn-container {
+    margin: 1.5em auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sponsors-container {
+    margin: 1em auto;
+    height: 2.5em;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .sponsor {
+    width: auto;
+  }
+
+  .databiz,
+  .meet {
+    height: 0.9em;
+  }
+
+  .audiophile {
+    height: 1.4em;
+  }
+
+  .maker {
+    height: 1.1em;
+  }
+}
+
+@media (min-width: 370px) and (max-width: 640px) {
+  .navigation-menu {
+    padding-right: 15em;
+  }
+}
